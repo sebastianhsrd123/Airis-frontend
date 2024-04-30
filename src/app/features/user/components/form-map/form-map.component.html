@@ -1,0 +1,51 @@
+<div (click)="closeModal()" class="button-add">
+  <mat-icon>add_location</mat-icon>
+</div>
+
+<div class="modal-container" *ngIf="showModal">
+  <div class="content-modal">
+    <div class="header-modal">
+      <h2 class="title-modal">Agregar marcador</h2>
+      <mat-icon (click)="closeModal()" class="close-icon">close</mat-icon>
+    </div>
+    <div class="body-modal" *ngIf="markerForm">
+      <form [formGroup]="markerForm">
+        <mat-form-field appearance="fill" class="input-form">
+          <mat-label>Ingrese la descripción</mat-label>
+          <input matInput placeholder="Descripción" formControlName="desc">
+          <mat-icon matSuffix>person</mat-icon>
+          <mat-hint *ngIf=" markerForm.get('desc')?.hasError('required') && markerForm.get('desc')?.touched"
+            class="input-error">El campo es requerido</mat-hint>
+          <mat-hint *ngIf=" markerForm.get('desc')?.hasError('pattern') && markerForm.get('desc')?.touched"
+            class="input-error">Utilice solo números y letras</mat-hint>
+          <mat-hint *ngIf=" markerForm.get('desc')?.hasError('maxlength') && markerForm.get('desc')?.touched"
+            class="input-error">El campo es demasiado largo</mat-hint>
+        </mat-form-field>
+
+        <mat-form-field appearance="fill" class="input-form">
+          <mat-label>Ingrese la latitud</mat-label>
+          <input matInput placeholder="Latitud" formControlName="lat">
+          <mat-icon matSuffix>person</mat-icon>
+
+          <mat-hint *ngIf="markerForm.get('lat')?.hasError('required') && markerForm.get('lat')?.touched"
+            class="input-error">El campo es requerido</mat-hint>
+          <mat-hint *ngIf="markerForm.get('lat')?.hasError('pattern') && markerForm.get('lat')?.touched"
+            class="input-error">Utilice solo números</mat-hint>
+        </mat-form-field>
+
+        <mat-form-field appearance="fill" class="input-form">
+          <mat-label>Ingrese la longitud</mat-label>
+          <input matInput placeholder="Longitud" formControlName="lng">
+          <mat-icon matSuffix>person</mat-icon>
+          <mat-hint *ngIf="markerForm.get('lng')?.hasError('required') && markerForm.get('lng')?.touched"
+            class="input-error">El campo es requerido</mat-hint>
+          <mat-hint *ngIf="markerForm.get('lng')?.hasError('pattern') && markerForm.get('lng')?.touched"
+            class="input-error">Utilice solo números</mat-hint>
+        </mat-form-field>
+
+        <button (click)="saveMarker()" mat-raised-button color="primary" [disabled]="!markerForm.valid" class="input-form">Crear
+          marcador</button>
+      </form>
+    </div>
+  </div>
+</div>

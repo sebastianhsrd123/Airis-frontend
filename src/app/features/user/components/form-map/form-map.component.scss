@@ -1,0 +1,35 @@
+.button-add{
+  position:absolute;
+  bottom: 30px;
+  right: 30px;
+  background-color: #007bff;
+  z-index: 999;
+  border-radius: 100%;
+  padding: 8px 10px;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.button-add:hover{
+  background-color: #0056b3;
+}
+
+.button-add:active{
+  background-color: #003366;
+}
+
+
+.content-modal{
+  position: relative;
+}
+
+.input-form{
+  width: 100%;
+}
+
+.input-error{
+  width:100%;
+  color: #e60e0e;
+}
+

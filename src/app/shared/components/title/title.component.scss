@@ -1,0 +1,14 @@
+.app-title{
+  margin-top: 24px;
+  font-size: 32px;
+  font-weight: 500;
+  color: #464646;
+  text-align: center;
+}
+
+@media screen and (max-width: 600px) {
+  .app-title {
+    font-size: 24px;
+  }
+
+}

@@ -1,0 +1,39 @@
+<div class="menu">
+  <button mat-button [matMenuTriggerFor]="buys"><mat-icon>shopping_basket</mat-icon> Compra</button>
+  <button mat-button [matMenuTriggerFor]="sale"><mat-icon> monetization_on</mat-icon> Venta</button>
+  <button (click)="endSession()" class="end" mat-button><mat-icon>exit_to_app</mat-icon> Cerrar Sesión</button>
+  <mat-menu #buys="matMenu">
+    <button (click)="projectOption()" mat-menu-item><mat-icon>build</mat-icon> Proyectos</button>
+  </mat-menu>
+  <mat-menu #sale="matMenu">
+    <button (click)="statsOption()" mat-menu-item><mat-icon> bar_chart</mat-icon> Estadisticas</button>
+  </mat-menu>
+</div>
+
+
+<div class="responsive-menu">
+  <mat-drawer-container class="example-container" [ngClass]="{'open-side':showSide}" autosize>
+    <mat-drawer #drawer class="example-sidenav" mode="side">
+      <button (click)="changeBuys()" class="button-responsive" mat-raised-button>
+        <mat-icon>shopping_basket</mat-icon> Compra
+      </button>
+      <button *ngIf="showBuys" (click)="projectOption(); drawer.toggle()" mat-menu-item><mat-icon>build</mat-icon> Proyectos</button>
+
+      <button (click)="changeSales()" class="button-responsive" mat-raised-button>
+        <mat-icon>monetization_on</mat-icon> Venta
+      </button>
+      <button *ngIf="showSales" (click)="statsOption(); drawer.toggle()" mat-menu-item><mat-icon> bar_chart</mat-icon>
+        Estadisticas</button>
+
+        <button (click)="endSession()" class="button-responsive" mat-raised-button><mat-icon>exit_to_app</mat-icon> Cerrar Sesión</button>
+
+    </mat-drawer>
+
+    <div class="example-sidenav-content">
+      <button type="button" mat-button (click)="drawer.toggle(); changeSide()">
+        <mat-icon>menu</mat-icon>
+      </button>
+    </div>
+
+  </mat-drawer-container>
+</div>

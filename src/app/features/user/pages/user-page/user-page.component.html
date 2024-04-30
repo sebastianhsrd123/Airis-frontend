@@ -1,0 +1,14 @@
+<section class="main-page">
+  <nav class="menu-container">
+    <app-nav-user (options)="changeOption($event)"></app-nav-user>
+  </nav>
+  <div class="title">
+    <app-title [content]="options"></app-title>
+  </div>
+  <div *ngIf="statsActive" class="content">
+    <app-stats></app-stats>
+  </div>
+  <div *ngIf="projectActive" class="content">
+    <app-map></app-map>
+  </div>
+</section>

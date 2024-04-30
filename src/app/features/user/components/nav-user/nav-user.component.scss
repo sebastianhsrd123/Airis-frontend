@@ -1,0 +1,56 @@
+
+
+.end{
+  position:absolute;
+  top: 5px;
+  right: 15px;
+
+}
+
+
+.responsive-menu{
+  position:absolute;
+  top: 5px;
+  left: 15px;
+  display: none;
+}
+
+.example-container{
+  background-color: #81BAEB;
+}
+
+.example-sidenav{
+  flex-direction: column;
+  background-color: #81BAEB;
+  width:200px;
+
+}
+
+.button-responsive{
+  width: 100%;
+  background-color: #81BAEB;
+
+}
+
+
+
+.open-side{
+  height: 250px;
+  z-index: 999999;
+}
+
+
+@media screen and (max-width: 500px){
+
+  .menu{
+    display: none;
+  }
+
+  .responsive-menu{
+    display: block;
+    left: 0;
+    width: 100%;
+  }
+
+}
+

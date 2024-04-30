@@ -1,0 +1,29 @@
+<section class="container" id="login-container">
+  <app-spinner [active]="isLoading"></app-spinner>
+  <mat-icon class="login-icon">account_circle</mat-icon>
+  <div class="input-form">
+    <h2>Iniciar Sesion</h2>
+
+    <mat-form-field appearance="fill">
+      <mat-label>Ingrese su correo electrónico</mat-label>
+      <input matInput placeholder="Correo" [(ngModel)]="loginData.email">
+      <mat-icon matSuffix>person</mat-icon>
+      <mat-hint class="input-error">{{errorEmail}}</mat-hint>
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+      <mat-label>Ingrese su contraseña</mat-label>
+      <input matInput [type]="hide ? 'password' : 'text'" [(ngModel)]="loginData.password">
+      <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'"
+        [attr.aria-pressed]="hide">
+        <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+      </button>
+      <mat-hint class="input-error">{{errorPassword}}</mat-hint>
+    </mat-form-field>
+
+    <button (click)="login()" aria-disabled="true" mat-flat-button color="primary"> Iniciar Sesion </button>
+
+
+  </div>
+</section>
+
