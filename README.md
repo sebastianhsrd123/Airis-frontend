@@ -34,5 +34,23 @@ El diseño de la aplicación se ha realizado utilizando el Framework Angular y M
 ### Lazy Loading
 La aplicación utiliza lazy loading para cargar los módulos de forma diferida, lo que mejora el rendimiento al cargar la aplicación al dividirla en partes más pequeñas y cargarlas solo cuando sean necesarias. Esto lo realiza en sus sistema de routing.
 
+## Credenciales de acceso
+
+Correo Electrónico: hugosrd123@correo.com
+Contraseña: Q1w2e3r4t5!
+
+
+Correo Electrónico: camilafbr123@correo.com
+Contraseña: Q1w2e3r4t5!
+
 ## Capturas de Pantalla
 A continuación se muestran algunas capturas de pantalla del proyecto:
+Inicio de sesión:
+![Login](src/assets/img/img-4.png)
+Estadisticas:
+![stats](src/assets/img/img-1.png)
+Mapa:
+![map](src/assets/img/img-3.png)
+Agregar marcador:
+![marker](src/assets/img/img-2.png)
+
