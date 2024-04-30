@@ -1,27 +1,38 @@
-# AirisTest
+# Airis Inmobiliaria(Prueba tecnica) 
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.3.11.
+## Descripción
+Este proyecto es una aplicación web desarrollada en Angular que implementa un sistema de login haciendo uso de JSON Web Token (JWT). La aplicación utiliza el Framework Material Design para el diseño de sus vistas y estilos. Además, se ha implementado lazy loading para mejorar el rendimiento de la aplicación al cargar los módulos de forma diferida.1.
 
-## Development server
+## Instalación
+Clonar el repositorio desde GitHub:
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+git clone https://github.com/tu-usuario/tu-proyecto-angular.git
 
-## Code scaffolding
+Navega hasta el directorio del proyecto:
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Instala las dependencias del proyecto:
 
-## Build
+npm install
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+## Ejecución
+Para ejecutar el proyecto, sigue estos pasos:
 
-## Running unit tests
+Desarrollo:
+ng serve
+La aplicación estará disponible en http://localhost:4200/. La página se recargará automáticamente si realizas cambios en el código fuente.
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## Producción:
 
-## Running end-to-end tests
+ng build --prod
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+## Implementación
+### Login con JWT
+El login se realiza mediante un formulario de inicio de sesión que envía las credenciales al servidor. Una vez autenticado, se genera un token JWT que se utiliza para autenticar las solicitudes posteriores con la ayuda de Guards se permite o impide el ingreso a diferentes rutas
+### Framework Angular - Material Design
+El diseño de la aplicación se ha realizado utilizando el Framework Angular y Material Design. Esto proporciona una apariencia moderna y consistente a través de la aplicación.
 
-## Further help
+### Lazy Loading
+La aplicación utiliza lazy loading para cargar los módulos de forma diferida, lo que mejora el rendimiento al cargar la aplicación al dividirla en partes más pequeñas y cargarlas solo cuando sean necesarias. Esto lo realiza en sus sistema de routing.
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+## Capturas de Pantalla
+A continuación se muestran algunas capturas de pantalla del proyecto:
